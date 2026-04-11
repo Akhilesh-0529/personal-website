@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Github, ExternalLink, X } from 'lucide-react';
+import { Code, ExternalLink, X } from 'lucide-react';
 import { projects } from '@/data/portfolio';
 import type { Project } from '@/types';
 
@@ -55,13 +55,20 @@ export function ProjectsSection() {
               onClick={() => setSelectedProject(project)}
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-400 to-purple-500">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
+              {project.image && (
+                <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-400 to-purple-500">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              )}
+              {!project.image && (
+                <div className="relative h-48 overflow-hidden bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                  <Code size={48} className="text-white/40" />
+                </div>
+              )}
 
               {/* Content */}
               <div className="p-6">
@@ -93,7 +100,7 @@ export function ProjectsSection() {
                     className="flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <Github size={16} /> Code
+                    <Code size={16} /> Code
                   </a>
                   <a
                     href={project.live}
@@ -160,7 +167,7 @@ export function ProjectsSection() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-6 py-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
-                  <Github size={20} /> View Code
+                  <Code size={20} /> View Code
                 </a>
                 <a
                   href={selectedProject.live}

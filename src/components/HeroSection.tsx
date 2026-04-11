@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { ArrowRight, Code, Award, Mail, X } from 'lucide-react';
 import Link from 'next/link';
 import { siteConfig } from '@/data/portfolio';
 
@@ -56,7 +56,7 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
           >
-            <Github size={24} />
+            <Code size={24} />
           </a>
           <a
             href="https://linkedin.com"
@@ -64,7 +64,7 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
           >
-            <Linkedin size={24} />
+            <Award size={24} />
           </a>
           <a
             href="https://twitter.com"
@@ -72,7 +72,7 @@ export function HeroSection() {
             rel="noopener noreferrer"
             className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
           >
-            <Twitter size={24} />
+            <X size={24} />
           </a>
           <a
             href="mailto:your.email@example.com"

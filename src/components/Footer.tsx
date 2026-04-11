@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
+import { Code, Award, X, Mail, Heart } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -76,7 +76,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
               >
-                <Github size={20} />
+                <Code size={20} />
               </a>
               <a
                 href="https://linkedin.com"
@@ -84,7 +84,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
               >
-                <Linkedin size={20} />
+                <Award size={20} />
               </a>
               <a
                 href="https://twitter.com"
@@ -92,7 +92,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
               >
-                <Twitter size={20} />
+                <X size={20} />
               </a>
               <a
                 href="mailto:your.email@example.com"

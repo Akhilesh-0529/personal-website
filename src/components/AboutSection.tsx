@@ -16,7 +16,7 @@ export function AboutSection() {
             className="relative h-96 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-400 to-purple-500"
           >
             <img
-              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=500&fit=crop"
+              src="/avatar.png"
               alt="About"
               className="w-full h-full object-cover"
             />
@@ -34,46 +34,42 @@ export function AboutSection() {
             </h2>
 
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-              I'm a passionate full-stack developer with over 4 years of experience building elegant
-              and functional web applications. I specialize in modern JavaScript frameworks and
-              cloud-based solutions.
+              I'm a B.Tech student in Computer Science and Engineering at Matrusri Engineering College, passionate about AI and Machine Learning. I specialize in developing intelligent systems using Python, PyTorch, and advanced NLP techniques.
             </p>
 
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-              My journey in tech started with a curiosity about how things work. Today, I'm committed
-              to writing clean, maintainable code and creating exceptional user experiences.
+              My journey in tech is driven by a curiosity to solve real-world problems using machine learning and data-driven approaches. I'm committed to building robust solutions with clean, maintainable code and a focus on practical applications.
             </p>
 
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing to
-              open-source projects, or enjoying outdoor activities.
+              When I'm not coding, you'll find me exploring open-source contributions, learning new ML frameworks, and researching cutting-edge AI techniques.
             </p>
 
             {/* Highlights */}
             <div className="grid grid-cols-2 gap-4">
               <div className="p-4 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600">
                 <h4 className="font-bold text-2xl text-purple-600 dark:text-purple-400 mb-1">
-                  50+
+                  8.05
                 </h4>
-                <p className="text-sm text-slate-600 dark:text-slate-400">Projects Completed</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Current CGPA</p>
               </div>
               <div className="p-4 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600">
                 <h4 className="font-bold text-2xl text-purple-600 dark:text-purple-400 mb-1">
-                  30+
+                  2
                 </h4>
-                <p className="text-sm text-slate-600 dark:text-slate-400">Happy Clients</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">ML Projects</p>
               </div>
               <div className="p-4 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600">
                 <h4 className="font-bold text-2xl text-purple-600 dark:text-purple-400 mb-1">
-                  4+
+                  12
                 </h4>
-                <p className="text-sm text-slate-600 dark:text-slate-400">Years Experience</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Core Skills</p>
               </div>
               <div className="p-4 bg-white dark:bg-slate-700 rounded-lg border border-slate-200 dark:border-slate-600">
                 <h4 className="font-bold text-2xl text-purple-600 dark:text-purple-400 mb-1">
-                  100%
+                  NLP
                 </h4>
-                <p className="text-sm text-slate-600 dark:text-slate-400">Dedication</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Specialty</p>
               </div>
             </div>
           </motion.div>
