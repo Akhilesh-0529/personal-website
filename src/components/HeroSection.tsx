@@ -1,8 +1,8 @@
 'use client';
 
-import { ArrowRight, Code, Award, Mail, X } from 'lucide-react';
+import { ArrowRight, Code, Mail, Phone } from 'lucide-react';
 import Link from 'next/link';
-import { siteConfig } from '@/data/portfolio';
+import { siteConfig, socialLinks } from '@/data/portfolio';
 
 export function HeroSection() {
   return (
@@ -50,36 +50,27 @@ export function HeroSection() {
 
         {/* Social Links */}
         <div className="flex justify-center gap-6">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
-          >
-            <Code size={24} />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
-          >
-            <Award size={24} />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
-          >
-            <X size={24} />
-          </a>
-          <a
-            href="mailto:your.email@example.com"
-            className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
-          >
-            <Mail size={24} />
-          </a>
+          {socialLinks.map((link) => {
+            let Icon = Mail;
+            if (link.icon === 'Github' || link.platform.toLowerCase() === 'github') Icon = Code;
+            else if (link.icon === 'Mail' || link.platform.toLowerCase() === 'email') Icon = Mail;
+            else if (link.icon === 'Phone' || link.platform.toLowerCase() === 'phone') Icon = Phone;
+
+            const isExternal = link.platform.toLowerCase() !== 'email' && link.platform.toLowerCase() !== 'phone';
+
+            return (
+              <a
+                key={link.platform}
+                href={link.url}
+                target={isExternal ? '_blank' : undefined}
+                rel={isExternal ? 'noopener noreferrer' : undefined}
+                className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
+                title={link.platform}
+              >
+                <Icon size={24} />
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

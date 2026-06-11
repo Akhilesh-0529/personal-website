@@ -34,15 +34,15 @@ export function AboutSection() {
             </h2>
 
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-              I'm a B.Tech student in Computer Science and Engineering at Matrusri Engineering College, passionate about AI and Machine Learning. I specialize in developing intelligent systems using Python, PyTorch, and advanced NLP techniques.
+              I&apos;m a B.Tech student in Computer Science and Engineering at Matrusri Engineering College, passionate about AI and Machine Learning. I specialize in developing intelligent systems using Python, PyTorch, and advanced NLP techniques.
             </p>
 
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-              My journey in tech is driven by a curiosity to solve real-world problems using machine learning and data-driven approaches. I'm committed to building robust solutions with clean, maintainable code and a focus on practical applications.
+              My journey in tech is driven by a curiosity to solve real-world problems using machine learning and data-driven approaches. I&apos;m committed to building robust solutions with clean, maintainable code and a focus on practical applications.
             </p>
 
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-              When I'm not coding, you'll find me exploring open-source contributions, learning new ML frameworks, and researching cutting-edge AI techniques.
+              When I&apos;m not coding, you&apos;ll find me exploring open-source contributions, learning new ML frameworks, and researching cutting-edge AI techniques.
             </p>
 
             {/* Highlights */}

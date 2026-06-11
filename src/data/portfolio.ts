@@ -88,7 +88,6 @@ export const education: Education[] = [
 export const socialLinks: SocialLink[] = [
   { platform: 'GitHub', url: 'https://github.com/Akhilesh-0529', icon: 'Github' },
   { platform: 'Email', url: 'mailto:akhileshyerram2006@gmail.com', icon: 'Mail' },
-  { platform: 'Phone', url: 'tel:+916281798594', icon: 'Phone' },
 ];
 
 export const siteConfig = {
@@ -98,4 +97,5 @@ export const siteConfig = {
     'B.Tech Student in Computer Science and Engineering at Matrusri Engineering College. Specialized in Machine Learning, NLP, and Data Analysis. Passionate about building intelligent systems to solve real-world problems using Python, PyTorch, and TensorFlow.',
   avatarUrl: '/avatar.png',
   resumeUrl: '/resume.pdf',
+  location: 'Hyderabad, India',
 };

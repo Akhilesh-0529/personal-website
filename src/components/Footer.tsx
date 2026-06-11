@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Code, Award, X, Mail, Heart } from 'lucide-react';
+import { Code, Mail, Phone, Heart } from 'lucide-react';
+import { siteConfig, socialLinks } from '@/data/portfolio';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -70,36 +71,27 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-white mb-4">Follow</h4>
             <div className="flex gap-4">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
-              >
-                <Code size={20} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
-              >
-                <Award size={20} />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
-              >
-                <X size={20} />
-              </a>
-              <a
-                href="mailto:your.email@example.com"
-                className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
-              >
-                <Mail size={20} />
-              </a>
+              {socialLinks.map((link) => {
+                let Icon = Mail;
+                if (link.icon === 'Github' || link.platform.toLowerCase() === 'github') Icon = Code;
+                else if (link.icon === 'Mail' || link.platform.toLowerCase() === 'email') Icon = Mail;
+                else if (link.icon === 'Phone' || link.platform.toLowerCase() === 'phone') Icon = Phone;
+
+                const isExternal = link.platform.toLowerCase() !== 'email' && link.platform.toLowerCase() !== 'phone';
+
+                return (
+                  <a
+                    key={link.platform}
+                    href={link.url}
+                    target={isExternal ? '_blank' : undefined}
+                    rel={isExternal ? 'noopener noreferrer' : undefined}
+                    className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
+                    title={link.platform}
+                  >
+                    <Icon size={20} />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -108,7 +100,7 @@ export function Footer() {
         <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-slate-400">
             <p className="flex items-center gap-2 mb-4 sm:mb-0">
-              Made with <Heart size={16} className="text-red-500" /> by John Doe
+              Made with <Heart size={16} className="text-red-500" /> by {siteConfig.name}
             </p>
             <p>&copy; {currentYear} All rights reserved.</p>
           </div>

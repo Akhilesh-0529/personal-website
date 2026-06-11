@@ -4,6 +4,8 @@ import './globals.css';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 
+import { siteConfig } from '@/data/portfolio';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -15,29 +17,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'John Doe | Full Stack Developer & Creative Technologist',
-  description: 'Portfolio of John Doe - Full Stack Developer. Crafting beautiful, high-performance web experiences with modern technologies.',
-  keywords: ['developer', 'portfolio', 'full stack', 'react', 'next.js', 'web development'],
-  authors: [{ name: 'John Doe' }],
+  title: `${siteConfig.name} | ${siteConfig.title}`,
+  description: siteConfig.description,
+  keywords: ['developer', 'portfolio', 'machine learning', 'artificial intelligence', 'nlp', 'data analysis'],
+  authors: [{ name: siteConfig.name }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://example.com',
-    title: 'John Doe | Full Stack Developer',
-    description: 'Portfolio of John Doe - Full Stack Developer',
+    title: `${siteConfig.name} | ${siteConfig.title}`,
+    description: siteConfig.description,
     images: [
       {
         url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop',
         width: 1200,
         height: 630,
-        alt: 'John Doe',
+        alt: siteConfig.name,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'John Doe | Full Stack Developer',
-    description: 'Portfolio of John Doe - Full Stack Developer',
+    title: `${siteConfig.name} | ${siteConfig.title}`,
+    description: siteConfig.description,
   },
 };
 

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { siteConfig, socialLinks } from '@/data/portfolio';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -26,6 +27,15 @@ export function ContactSection() {
     setFormData({ name: '', email: '', message: '' });
   };
 
+  const emailLink = socialLinks.find(link => link.platform.toLowerCase() === 'email');
+  const phoneLink = socialLinks.find(link => link.platform.toLowerCase() === 'phone');
+
+  const emailUrl = emailLink ? emailLink.url : 'mailto:akhileshyerram2006@gmail.com';
+  const emailDisplay = emailLink ? emailLink.url.replace('mailto:', '') : 'akhileshyerram2006@gmail.com';
+
+  const phoneUrl = phoneLink ? phoneLink.url : '';
+  const phoneDisplay = phoneLink ? phoneLink.url.replace('tel:', '') : '';
+
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
       <div className="max-w-6xl mx-auto">
@@ -35,7 +45,7 @@ export function ContactSection() {
             Get In Touch
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400">
-            Have a project in mind? Let's talk about it
+            Have a project in mind? Let&apos;s talk about it
           </p>
         </div>
 
@@ -48,13 +58,13 @@ export function ContactSection() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8">
-              Let's Connect
+              Let&apos;s Connect
             </h3>
 
             <div className="space-y-6">
               {/* Email */}
               <a
-                href="mailto:your.email@example.com"
+                href={emailUrl}
                 className="flex items-start gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-purple-500 transition-colors group"
               >
                 <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors">
@@ -62,23 +72,25 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Email</h4>
-                  <p className="text-slate-600 dark:text-slate-400">your.email@example.com</p>
+                  <p className="text-slate-600 dark:text-slate-400">{emailDisplay}</p>
                 </div>
               </a>
 
               {/* Phone */}
-              <a
-                href="tel:+1234567890"
-                className="flex items-start gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-purple-500 transition-colors group"
-              >
-                <div className="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg group-hover:bg-purple-200 dark:group-hover:bg-purple-900/50 transition-colors">
-                  <Phone size={24} className="text-purple-600 dark:text-purple-400" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Phone</h4>
-                  <p className="text-slate-600 dark:text-slate-400">+1 (234) 567-890</p>
-                </div>
-              </a>
+              {phoneLink && phoneLink.url && (
+                <a
+                  href={phoneUrl}
+                  className="flex items-start gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-purple-500 transition-colors group"
+                >
+                  <div className="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg group-hover:bg-purple-200 dark:group-hover:bg-purple-900/50 transition-colors">
+                    <Phone size={24} className="text-purple-600 dark:text-purple-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Phone</h4>
+                    <p className="text-slate-600 dark:text-slate-400">{phoneDisplay}</p>
+                  </div>
+                </a>
+              )}
 
               {/* Location */}
               <div className="flex items-start gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700">
@@ -87,7 +99,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Location</h4>
-                  <p className="text-slate-600 dark:text-slate-400">San Francisco, CA</p>
+                  <p className="text-slate-600 dark:text-slate-400">{siteConfig.location || 'Hyderabad, India'}</p>
                 </div>
               </div>
             </div>
@@ -96,13 +108,15 @@ export function ContactSection() {
             <div className="mt-8">
               <h4 className="font-semibold text-slate-900 dark:text-white mb-4">Follow me</h4>
               <div className="flex gap-4">
-                {['GitHub', 'LinkedIn', 'Twitter'].map((platform) => (
+                {socialLinks.map((link) => (
                   <a
-                    key={platform}
-                    href="#"
-                    className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors font-semibold text-sm"
+                    key={link.platform}
+                    href={link.url}
+                    target={link.platform.toLowerCase() !== 'email' && link.platform.toLowerCase() !== 'phone' ? '_blank' : undefined}
+                    rel="noopener noreferrer"
+                    className="p-3 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors font-semibold text-sm text-slate-800 dark:text-slate-200"
                   >
-                    {platform}
+                    {link.platform}
                   </a>
                 ))}
               </div>
@@ -129,7 +143,7 @@ export function ContactSection() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="John Doe"
+                placeholder="Your Name"
                 required
                 className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:border-purple-500 dark:focus:border-purple-500 focus:outline-none transition-colors text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400"
               />
@@ -146,7 +160,7 @@ export function ContactSection() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="john@example.com"
+                placeholder="name@example.com"
                 required
                 className="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:border-purple-500 dark:focus:border-purple-500 focus:outline-none transition-colors text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400"
               />
