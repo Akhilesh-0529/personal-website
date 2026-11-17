@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akhilesh Yerram — Software Developer & AI/ML Engineer</title>
+  <meta name="description" content="Personal portfolio and digital garden of Akhilesh Yerram, Software Developer and AI/ML Engineer based in Hyderabad, India.">
+  <meta name="keywords" content="Akhilesh Yerram, Software Developer, AI, Machine Learning, Deep Learning, Computer Vision, Next.js, PyTorch, YOLOv8, Portfolio">
+  <meta name="author" content="Akhilesh Yerram">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Akhilesh Yerram — Software Developer & AI/ML Engineer">
+  <meta property="og:description" content="Personal portfolio and digital garden of Akhilesh Yerram. Explore projects in AI/ML, computer vision, and modern web applications.">
+  <meta property="og:url" content="https://akhilesh-0529.github.io/">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="site-wrapper">
+
+    <!-- Floating Navigation Bar -->
+    <header class="site-header">
+      <nav class="nav-pill" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="active">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#garden">Garden</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Command Palette Trigger -->
+          <button class="icon-btn cmd-trigger" title="Command Palette (Cmd+K)" aria-label="Open Command Palette">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <span class="kbd-shortcut cmd-trigger" title="Press Cmd+K / Ctrl+K">⌘K</span>
+
+          <!-- Theme Toggle Button -->
+          <button id="theme-toggle-btn" class="icon-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            <!-- Sun Icon (shown in dark mode) -->
+            <svg id="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon (shown in light mode) -->
+            <svg id="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+      <!-- Hero Section -->
+      <section id="about" class="hero-section">
+        <div class="hero-profile">
+          <div class="hero-title-group">
+            <h1>Akhilesh Yerram</h1>
+            <div class="hero-role">
+              Software Developer & <strong>AI / ML Engineer</strong>
+            </div>
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span>Available for internships & engineering roles</span>
+            </div>
+          </div>
+          <div class="avatar-container">
+            <img src="public/avatar.png" alt="Akhilesh Yerram" class="avatar" onerror="this.style.display='none'; document.getElementById('avatar-initials').style.display='flex';">
+            <div id="avatar-initials" class="avatar" style="display:none;" title="Akhilesh Yerram">AY</div>
+          </div>
+        </div>
+
+        <p class="hero-bio">
+          Hey, I'm Akhilesh. I am a Computer Science undergraduate at <strong>Matrusri Engineering College (Osmania University)</strong> in Hyderabad, India. 
+          I love exploring the frontier of <em>machine learning, computer vision, and modern web systems</em> — building products that turn complex data pipelines into intuitive, lightning-fast interfaces.
+        </p>
+
+        <div class="hero-actions">
+          <a href="public/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            View Resume (PDF)
+          </a>
+          <a href="mailto:akhileshyerram2006@gmail.com" class="btn btn-secondary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Get in touch
+          </a>
+          <button class="btn btn-secondary copy-email-btn" title="Click to copy email address">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            Copy email
+          </button>
+          <a href="https://github.com/Akhilesh-0529" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/akhileshyerram" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="section-block">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            Work Experience
+          </h2>
+          <span class="section-tagline">internships & engineering</span>
+        </div>
+
+        <div class="timeline-list">
+
+          <!-- Cyient -->
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-role">
+                Software Developer (Intern) · <span class="timeline-company">Cyient</span>
+              </div>
+              <div class="timeline-meta">Aug 2026 – Oct 2026</div>
+            </div>
+            <div class="timeline-location">Hyderabad, India</div>
+            <ul class="timeline-bullets">
+              <li>Built the <strong>TPM Portal</strong>, a full-stack Flask + Bootstrap + jQuery web application consolidating project documentation scattered across local servers, Teams, SharePoint, and developer machines into a single unified search dashboard.</li>
+              <li>Contributed to Python-based data analytics and <strong>Power BI</strong> reporting dashboards for aerospace engineering teams, streamlining software tooling for aircraft-related applications.</li>
+              <li>Collaborated in an agile team setting with regular progress syncs with reporting managers, reliably delivering milestones within fixed project schedules.</li>
+            </ul>
+          </div>
+
+          <!-- VISWAM.AI -->
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-role">
+                AI Intern · <span class="timeline-company">VISWAM.AI</span>
+              </div>
+              <div class="timeline-meta">NLP & Knowledge Graphs</div>
+            </div>
+            <div class="timeline-location">Mentored by Swecha Telangana & IIIT Hyderabad</div>
+            <ul class="timeline-bullets">
+              <li>Collected, cleaned, and curated comprehensive Telugu-language text corpora for Natural Language Processing (NLP) models, focusing on preserving cultural and traditional heritage knowledge.</li>
+              <li>Engineered NLP data pipelines and knowledge-graph retrieval mechanisms using <strong>PyTorch</strong>, working under the mentorship of research affiliates from Meta, Swecha Telangana, and IIIT Hyderabad.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section id="education" class="section-block">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            Education
+          </h2>
+          <span class="section-tagline">academic background</span>
+        </div>
+
+        <div class="timeline-list">
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <div class="timeline-role">
+                Matrusri Engineering College · <span class="timeline-company">Osmania University</span>
+              </div>
+              <div class="timeline-meta">Aug 2023 – May 2027</div>
+            </div>
+            <div class="timeline-location">Hyderabad, India</div>
+            <ul class="timeline-bullets">
+              <li><strong>Bachelor of Technology (B.Tech)</strong> in Computer Science and Engineering</li>
+              <li>Cumulative Grade Point Average (CGPA): <strong>8.12 / 10.0</strong></li>
+              <li>Relevant Coursework: Data Structures & Algorithms, Operating Systems, Machine Learning, Database Management Systems, Cloud Computing.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects Section -->
+      <section id="projects" class="section-block">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            Featured Projects
+          </h2>
+          <span class="section-tagline">open source & prototypes</span>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ai-ml">AI & ML</button>
+          <button class="filter-btn" data-filter="web">Full Stack / Web</button>
+          <button class="filter-btn" data-filter="cv-iot">Vision & Systems</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: EduSphere -->
+          <article class="project-card" data-category="web ai-ml">
+            <div>
+              <div class="project-card-header">
+                <a href="https://github.com/Akhilesh-0529" target="_blank" rel="noopener noreferrer" class="project-title">
+                  EduSphere (edu-Graph)
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <div class="project-links">
+                  <a href="https://github.com/Akhilesh-0529" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source on GitHub">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="project-desc">
+                A Retrieval-Augmented Generation (RAG) educational platform featuring role-based authentication and custom middleware debugging for Next.js 16. Initially prototyped with vanilla HTML/CSS/JS with local Gemma integration, then re-architected into a robust Next.js + Supabase production stack.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Next.js 16</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Ollama</span>
+              <span class="tag">Gemma</span>
+              <span class="tag">RAG</span>
+            </div>
+          </article>
+
+          <!-- Project 2: Stock Sentiment Predictor -->
+          <article class="project-card" data-category="ai-ml">
+            <div>
+              <div class="project-card-header">
+                <a href="https://github.com/Akhilesh-0529" target="_blank" rel="noopener noreferrer" class="project-title">
+                  Stock Sentiment Predictor
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <div class="project-links">
+                  <a href="https://github.com/Akhilesh-0529" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source on GitHub">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="project-desc">
+                Machine learning model designed to evaluate market sentiment alongside historical price metrics. Reduced stock prediction error by <strong>70%</strong> and boosted overall model directional accuracy by <strong>40%</strong> through feature engineering on financial news and sentiment streams.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Scikit-Learn</span>
+            </div>
+          </article>
+
+          <!-- Project 3: Smart Factory Monitoring System -->
+          <article class="project-card" data-category="cv-iot ai-ml">
+            <div>
+              <div class="project-card-header">
+                <a href="https://github.com/Akhilesh-0529" target="_blank" rel="noopener noreferrer" class="project-title">
+                  Smart Factory Monitoring System
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <div class="project-links">
+                  <a href="https://github.com/Akhilesh-0529" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source on GitHub">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="project-desc">
+                High-speed industrial safety and quality control system built for the Cognizant Technoverse hackathon. Prototyped real-time defect identification and PPE compliance tracking using YOLOv8 object detection, combined with an LLM intelligence layer for automated root-cause failure analysis.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">YOLOv8</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Edge AI</span>
+            </div>
+          </article>
+
+          <!-- Project 4: Blockchain IoT Framework -->
+          <article class="project-card" data-category="cv-iot">
+            <div>
+              <div class="project-card-header">
+                <a href="https://github.com/Akhilesh-0529" target="_blank" rel="noopener noreferrer" class="project-title">
+                  Blockchain-based IoT Security Framework
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <div class="project-links">
+                  <a href="https://github.com/Akhilesh-0529" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Source on GitHub">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="project-desc">
+                Architected a permissioned blockchain using Proof of Authority (PoA) consensus for zero-trust IoT device authentication and cryptographic tamper-resistant data integrity, verified through a live Smart Surveillance demo prototype.
+              </p>
+            </div>
+            <div class="project-tags">
+              <span class="tag">Blockchain</span>
+              <span class="tag">PoA Consensus</span>
+              <span class="tag">IoT Security</span>
+              <span class="tag">Smart Surveillance</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Technical Skills Section -->
+      <section id="skills" class="section-block">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+            Technical Stack
+          </h2>
+          <span class="section-tagline">tools & capabilities</span>
+        </div>
+
+        <div class="skills-container">
+
+          <!-- Languages -->
+          <div class="skill-category-card">
+            <div class="skill-category-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+              Languages
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">JavaScript (ES6+)</span>
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">HTML / CSS</span>
+            </div>
+          </div>
+
+          <!-- AI & ML -->
+          <div class="skill-category-card">
+            <div class="skill-category-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+              AI & Machine Learning
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">PyTorch</span>
+              <span class="skill-pill">RAG</span>
+              <span class="skill-pill">LLMs</span>
+              <span class="skill-pill">Ollama</span>
+              <span class="skill-pill">NLP</span>
+              <span class="skill-pill">Knowledge Graphs</span>
+              <span class="skill-pill">Deep Learning</span>
+              <span class="skill-pill">Scikit-Learn</span>
+            </div>
+          </div>
+
+          <!-- Computer Vision -->
+          <div class="skill-category-card">
+            <div class="skill-category-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              Computer Vision
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">YOLOv8</span>
+              <span class="skill-pill">OpenCV</span>
+              <span class="skill-pill">Object Detection</span>
+              <span class="skill-pill">Multi-Object Tracking</span>
+              <span class="skill-pill">Edge AI</span>
+            </div>
+          </div>
+
+          <!-- Web & Data -->
+          <div class="skill-category-card">
+            <div class="skill-category-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              Web & Data Engineering
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">Next.js</span>
+              <span class="skill-pill">Flask</span>
+              <span class="skill-pill">Supabase</span>
+              <span class="skill-pill">MongoDB</span>
+              <span class="skill-pill">Socket.IO</span>
+              <span class="skill-pill">Bootstrap</span>
+              <span class="skill-pill">jQuery</span>
+              <span class="skill-pill">Power BI</span>
+            </div>
+          </div>
+
+          <!-- Cloud & Platforms -->
+          <div class="skill-category-card">
+            <div class="skill-category-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+              Cloud & Systems
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill">Google Cloud (GCP)</span>
+              <span class="skill-pill">Cloud Fundamentals</span>
+              <span class="skill-pill">Git / GitHub</span>
+              <span class="skill-pill">Permissioned Blockchain</span>
+              <span class="skill-pill">RESTful APIs</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Achievements & Certifications -->
+      <section id="achievements" class="section-block">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+            Achievements & Recognition
+          </h2>
+          <span class="section-tagline">hackathons & credentials</span>
+        </div>
+
+        <div class="achievements-list">
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="achievement-text">
+              <strong>Hackathons & Competitions:</strong> Participated in <strong>TCS CodeVita Season 11 & Season 12</strong>; pitched a 3D-printed industrial inspection drone equipped with a YOLOv8 + LLM intelligence layer at <strong>MSME Idea Hackathon 6.0</strong>; active participant in <strong>HackerRank Orchestrate</strong> (May 2026) and <strong>Hack Club Stardance</strong>.
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <div class="achievement-text">
+              <strong>Machine Learning Specialization:</strong> Issued by <strong>Stanford University / DeepLearning.AI</strong> on Coursera (covering Supervised Learning, Advanced Learning Algorithms, and Unsupervised Learning & Recommender Systems).
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <div class="achievement-text">
+              <strong>Google Cloud & Industry Badges:</strong> Earned verified Google Cloud credentials in <strong>Modern Infrastructure</strong> and <strong>Generative AI</strong>; completed <strong>Introduction to Cloud Computing</strong> (Coursera), <strong>MongoDB University</strong> database badges, and <strong>Alpha DSA with Java</strong>.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Chester's Digital Garden Signature Section -->
+      <section id="garden" class="section-block">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+              <path d="M12 12L2.1 12a10.1 10.1 0 0 1 1.9-5"></path>
+            </svg>
+            The Garden & Mindset
+          </h2>
+          <span class="section-tagline">digital notes & curations</span>
+        </div>
+
+        <div class="garden-card">
+          <div class="garden-header">
+            <span>🌱 Currently exploring & reflecting</span>
+          </div>
+          <div class="garden-grid">
+            <div>
+              <div class="garden-item-title">Current Focus</div>
+              <p>Designing efficient multi-modal edge AI inference using quantized LLMs and local vision transformers.</p>
+            </div>
+            <div>
+              <div class="garden-item-title">Reading & Research</div>
+              <p>RAG architecture optimizations, vector retrieval index benchmarks, and distributed training systems.</p>
+            </div>
+            <div>
+              <div class="garden-item-title">Favorite Tools</div>
+              <p>PyTorch, Next.js, Cursor, Ollama, Supabase, and clean minimalist web interfaces.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-clock">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span id="live-clock">Loading time...</span>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://github.com/Akhilesh-0529" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          <span>·</span>
+          <a href="https://linkedin.com/in/akhileshyerram" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <span>·</span>
+          <a href="mailto:akhileshyerram2006@gmail.com" class="copy-email-btn">
+            Email
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Akhilesh Yerram. Built with craft & clean HTML/CSS.</div>
+        <div>Inspired by <a href="https://chester.how" target="_blank" rel="noopener noreferrer" class="text-link">chester.how</a></div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Command Palette Modal (Cmd+K) -->
+  <div id="cmd-backdrop" class="cmd-backdrop" aria-hidden="true">
+    <div class="cmd-dialog" role="dialog" aria-modal="true" aria-label="Command Menu">
+      <div class="cmd-search-bar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input id="cmd-input" type="text" placeholder="Type a command or jump to section..." autocomplete="off">
+        <span class="kbd-shortcut">ESC</span>
+      </div>
+      <ul class="cmd-results">
+        <li class="cmd-item" data-action="navigate" data-target="#about">
+          <div class="cmd-item-left">
+            <span>About Akhilesh</span>
+          </div>
+          <span class="cmd-item-shortcut">Jump</span>
+        </li>
+        <li class="cmd-item" data-action="navigate" data-target="#experience">
+          <div class="cmd-item-left">
+            <span>Work Experience (Cyient, VISWAM.AI)</span>
+          </div>
+          <span class="cmd-item-shortcut">Jump</span>
+        </li>
+        <li class="cmd-item" data-action="navigate" data-target="#projects">
+          <div class="cmd-item-left">
+            <span>Featured Projects (EduSphere, YOLOv8, etc.)</span>
+          </div>
+          <span class="cmd-item-shortcut">Jump</span>
+        </li>
+        <li class="cmd-item" data-action="navigate" data-target="#skills">
+          <div class="cmd-item-left">
+            <span>Technical Stack & Skills</span>
+          </div>
+          <span class="cmd-item-shortcut">Jump</span>
+        </li>
+        <li class="cmd-item" data-action="navigate" data-target="#achievements">
+          <div class="cmd-item-left">
+            <span>Achievements & Badges</span>
+          </div>
+          <span class="cmd-item-shortcut">Jump</span>
+        </li>
+        <li class="cmd-item" data-action="navigate" data-target="#garden">
+          <div class="cmd-item-left">
+            <span>The Garden & Notes</span>
+          </div>
+          <span class="cmd-item-shortcut">Jump</span>
+        </li>
+        <li class="cmd-item" data-action="copy-email">
+          <div class="cmd-item-left">
+            <span>Copy Email to Clipboard</span>
+          </div>
+          <span class="cmd-item-shortcut">Action</span>
+        </li>
+        <li class="cmd-item" data-action="toggle-theme">
+          <div class="cmd-item-left">
+            <span>Toggle Dark / Light Theme</span>
+          </div>
+          <span class="cmd-item-shortcut">Theme</span>
+        </li>
+        <li class="cmd-item" data-action="open-link" data-target="https://github.com/Akhilesh-0529">
+          <div class="cmd-item-left">
+            <span>Open GitHub Profile (@Akhilesh-0529)</span>
+          </div>
+          <span class="cmd-item-shortcut">External ↗</span>
+        </li>
+        <li class="cmd-item" data-action="open-link" data-target="https://linkedin.com/in/akhileshyerram">
+          <div class="cmd-item-left">
+            <span>Open LinkedIn Profile</span>
+          </div>
+          <span class="cmd-item-shortcut">External ↗</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Toast Message -->
+  <div id="toast-msg" class="toast-msg" role="status" aria-live="polite">
+    Copied to clipboard!
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
