@@ -19,48 +19,26 @@ Built with semantic HTML5, modern CSS3 (custom properties, light/dark mode, resp
 
 ---
 
-## 🚀 How to Deploy to GitHub Pages (Takes 1-2 Minutes)
+## 🚀 Deploying to GitHub (`personal-website`)
 
-### Option 1: Personal User Site (`Akhilesh-0529.github.io`)
-This will make your website accessible directly at `https://akhilesh-0529.github.io/`.
-
-1. Go to GitHub and create a new public repository named:
-   ```
-   Akhilesh-0529.github.io
-   ```
-2. In your local terminal, navigate to this project folder:
+1. The repository remote is already configured:
    ```bash
    cd /Users/yerramakhilesh/.gemini/antigravity/scratch/akhilesh-portfolio
+   git remote -v
+   # origin  https://github.com/Akhilesh-0529/personal-website.git
    ```
-3. Initialize git, commit, and push:
+
+2. Push your commits to `main`:
    ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: chester.how inspired portfolio"
-   git branch -M main
-   git remote add origin https://github.com/Akhilesh-0529/Akhilesh-0529.github.io.git
-   git push -u origin main
+   git push origin main
    ```
-4. On GitHub, go to your repository **Settings** → **Pages**:
-   - Under **Source**, select **Deploy from a branch**.
-   - Branch: `main` / Folder: `/ (root)`.
+
+3. Enable GitHub Pages in repository **Settings → Pages**:
+   - **Source**: `Deploy from a branch`
+   - **Branch**: `main` / Folder: `/ (root)`
    - Click **Save**.
-5. Your website will be live in ~30 seconds at `https://akhilesh-0529.github.io/`!
 
----
-
-### Option 2: Project Repository (`portfolio`)
-If you name your repository `portfolio`, it will be live at `https://akhilesh-0529.github.io/portfolio/`.
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: portfolio"
-git branch -M main
-git remote add origin https://github.com/Akhilesh-0529/portfolio.git
-git push -u origin main
-```
-Then enable GitHub Pages in Settings → Pages (Branch: `main`, Folder: `/ (root)`).
+Your portfolio will be live at `https://akhilesh-0529.github.io/personal-website/`!
 
 ---
 
